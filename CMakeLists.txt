@@ -37,5 +37,6 @@ target_include_directories(imgui PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/backends)
 target_compile_definitions(imgui PUBLIC IMGUI_IMPL_OPENGL_LOADER_GLAD)
 
 # Link the imgui target with glfw and OpenGL libraries
-# target_link_libraries(imgui PUBLIC glfw)
+target_link_libraries(imgui PUBLIC glfw)
+target_include_directories(imgui PUBLIC ${glfw_SOURCE_DIR})
 # target_link_libraries(imgui PUBLIC OpenGL::GL)
